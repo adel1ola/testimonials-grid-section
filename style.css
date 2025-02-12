@@ -13,6 +13,13 @@ main {
     margin: 0 auto;
     display: grid;
     gap: 2em;
+    grid-template-areas: 
+        'one'
+        'two'
+        'three'
+        'four'
+        'five';
+    grid-auto-columns: 1fr;
 }
 section {
     padding: 2em;
@@ -44,16 +51,28 @@ section:first-child {
     background-image: url(images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
     background-position: 90% 0%;
+    grid-area: one;
 }
 section:nth-child(2) {
     background-color: hsl(217, 19%, 35%);
+    grid-area: two;
 }
 section:nth-child(3) {
     background-color: hsl(0, 0%, 100%);
+    grid-area: three;
 }
 section:nth-child(4) {
     background-color: hsl(219, 29%, 14%);
+    grid-area: four;
 }
 section:last-child {
     background-color: hsl(0, 0%, 100%);
+    grid-area: five;
+}
+@media screen and (min-device-width: 600px) {
+    main {
+        grid-template-areas: 
+            'one one two five'
+            'three four four five';
+    }
 }
