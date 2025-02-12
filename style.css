@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(210, 46%, 95%);
+    color: hsl(0, 0%, 81%);
+    font-family: 'Barlow Semi Condensed';
+    margin: 0;
+    padding: 2em 0;
+}
+main {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    gap: 2em;
+}
+section {
+    padding: 2em;
+    border-radius: 5px;
+}
+.person {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 11.5em;
+}
+img {
+    border-radius: 50%;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: center;
+}
+.desc {
+    opacity: 50%;
+}
+p {
+    opacity: 70%
+}
+section:first-child {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 0%;
+}
+section:nth-child(2) {
+    background-color: hsl(217, 19%, 35%);
+}
+section:nth-child(3) {
+    background-color: hsl(0, 0%, 100%);
+}
+section:nth-child(4) {
+    background-color: hsl(219, 29%, 14%);
+}
+section:last-child {
+    background-color: hsl(0, 0%, 100%);
+}
